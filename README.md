@@ -1,4 +1,4 @@
-# Retrospective
+# Hindsight
 ### By Jeffrey Smith - efficientstreet.com
 
 A self-improvement skill for AI coding assistants. At the end of a session,
@@ -14,7 +14,7 @@ through a session and what it will and won't write down.**
 
 ## What you get
 
-- **One trigger, one pass** — "run a retrospective" (or equivalent phrasing)
+- **One trigger, one pass** — "get some hindsight" (or equivalent phrasing)
   reviews the whole session end-to-end, not just the last exchange.
 - **Root causes, not symptoms** — for anything that took multiple attempts,
   it asks what single upstream fix would have prevented the whole chain,
@@ -46,28 +46,28 @@ Copy `SKILL.md` into your assistant's skills folder.
 
 **Claude Code:**
 ```bash
-mkdir -p .claude/skills/retrospective
-cp SKILL.md .claude/skills/retrospective/SKILL.md
+mkdir -p .claude/skills/hindsight
+cp SKILL.md .claude/skills/hindsight/SKILL.md
 ```
 
 Or install it once at the user level so it's available in every project:
 ```bash
-mkdir -p ~/.claude/skills/retrospective
-cp SKILL.md ~/.claude/skills/retrospective/SKILL.md
+mkdir -p ~/.claude/skills/hindsight
+cp SKILL.md ~/.claude/skills/hindsight/SKILL.md
 ```
 
 ## Use it
 
 Trigger it in conversation any time you want a session reviewed:
 
-> "Run a retrospective."
+> "Get some hindsight."
 > "What should we improve?"
 > "Review today and notate lessons."
 > "What did you learn today?"
 > "Save what's worth remembering from this session."
 
 It's deliberately **on-demand only** (`disable-model-invocation: true` in
-the frontmatter) — a retrospective writes persistent memory, so timing
+the frontmatter) — a hindsight pass writes persistent memory, so timing
 stays your call, never something the assistant decides to run on its own.
 
 ## Tuning it to your own setup

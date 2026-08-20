@@ -96,7 +96,7 @@ near-duplicate file. Every new or newly-touched entry gets reflected in
 whatever serves as that system's index, so nothing written is orphaned and
 invisible next session.
 
-**If none exists:** the retrospective gets produced as a single, clearly
+**If none exists:** the hindsight report gets produced as a single, clearly
 organized standalone document instead — written so it stands on its own
 without the original conversation as context, ready for the user to save
 wherever they keep notes.

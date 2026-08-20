@@ -1,29 +1,29 @@
 ---
-name: retrospective
-description: Reviews everything accomplished in the current session end-to-end, distills genuine process lessons (not one-off content specifics), and saves the durable ones as persistent memory — updating an existing related memory in place rather than duplicating it. Trigger on "run a retrospective," "what should we improve," "review today and notate lessons," "what did you learn today," "save what's worth remembering from this session." Does not redo or re-open any of the session's actual work, and never fabricates a lesson just to have something to report.
+name: hindsight
+description: Reviews everything accomplished in the current session end-to-end, distills genuine process lessons (not one-off content specifics), and saves the durable ones as persistent memory — updating an existing related memory in place rather than duplicating it. Trigger on "get some hindsight," "run a hindsight pass," "what should we improve," "review today and notate lessons," "what did you learn today," "save what's worth remembering from this session." Does not redo or re-open any of the session's actual work, and never fabricates a lesson just to have something to report.
 allowed-tools: Read, Write, Edit, Glob, Grep
 disable-model-invocation: true
 ---
 
-# Retrospective
+# Hindsight
 
 A session-end self-improvement pass. Read-only against the session's actual
 work — it never redoes or re-opens a task — and write-only against memory.
-User-triggered only: a retrospective writes persistent memory, so timing
+User-triggered only: a hindsight pass writes persistent memory, so timing
 stays the user's call, never something run on a hunch.
 
 ## When this fires
 
-On-demand only: "run a retrospective," "what should we improve," "review
-today and notate lessons," "what did you learn today," "save what's worth
-remembering from this session."
+On-demand only: "get some hindsight," "run a hindsight pass," "what should
+we improve," "review today and notate lessons," "what did you learn today,"
+"save what's worth remembering from this session."
 
 ## Process
 
 Review the full body of work completed in this session — every task,
 decision, correction, and course-change from start to finish, not just the
-most recent exchange. Then produce a structured self-improvement
-retrospective covering the following:
+most recent exchange. Then produce a structured hindsight report covering
+the following:
 
 1. **Identify genuine process failures, not just outcomes.** For each
    meaningful mistake, inefficiency, or round of back-and-forth correction,
@@ -60,7 +60,7 @@ retrospective covering the following:
    discrete, well-labeled entry — check first whether an existing note
    already covers the same topic and update it in place rather than
    creating a near-duplicate. If no persistent memory system exists,
-   produce the retrospective as a clearly organized, standalone document
+   produce the hindsight report as a clearly organized, standalone document
    the user can save themselves, written so it remains useful without the
    original conversation as context.
 
@@ -73,10 +73,10 @@ retrospective covering the following:
    connector that failed to connect), record those as factual findings
    distinct from process lessons about how the work itself was approached.
 
-6. **Report back concisely.** After persisting or writing up the
-   retrospective, summarize for the user in a few short sections what was
-   learned and what will change — not a restatement of the whole session,
-   just the lessons and their practical effect on future work.
+6. **Report back concisely.** After persisting or writing up the hindsight
+   report, summarize for the user in a few short sections what was learned
+   and what will change — not a restatement of the whole session, just the
+   lessons and their practical effect on future work.
 
 ## In this environment
 
@@ -88,9 +88,9 @@ distinctly from ordinary project files:
   `~/.claude/projects/<project-slug>/memory/` (the slug is derived from the
   project's working-directory path — different per project, not a fixed
   path), one markdown file per fact, each with `name`/`description`/
-  `metadata.type` frontmatter. `type: feedback` fits nearly every
-  retrospective lesson — it's guidance on how to work, with a why. That
-  same folder's `MEMORY.md` is the index loaded into every session.
+  `metadata.type` frontmatter. `type: feedback` fits nearly every hindsight
+  lesson — it's guidance on how to work, with a why. That same folder's
+  `MEMORY.md` is the index loaded into every session.
 - **Whatever the mechanism, the same rule applies:** read the index or
   browse existing entries first, to find one that already covers the
   lesson's topic. Existing topic → edit that file (append a dated addendum
@@ -101,7 +101,7 @@ distinctly from ordinary project files:
   serves as the index — a memory nothing points to is easy to miss next
   session.
 - If no such system exists in the current environment, fall back to step
-  4's standalone-document path — write the retrospective as one
+  4's standalone-document path — write the hindsight report as one
   self-contained file the user can save wherever they keep notes.
 
 ## Definition of done
