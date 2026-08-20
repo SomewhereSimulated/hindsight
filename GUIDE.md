@@ -40,7 +40,7 @@ its *average* session gets, not just its error count.
 
 ---
 
-## The six-step pass
+## The seven-step pass
 
 ### 1. Find genuine process failures, not surface symptoms
 
@@ -68,7 +68,29 @@ reconstructed from memory. A single failure doesn't get written up as a
 universal rule — the pass distinguishes "this happened once, might be a
 fluke" from "this failed the same way twice, that's a real pattern."
 
-### 4. Persist, don't just narrate
+### 4. Ask: did this session prove it, or only suggest it?
+
+This is a different question from Step 3's fact-checking, and it's easy to
+conflate the two. Step 3 asks "is this claim accurate?" — did the tool
+actually say that, did the file actually contain that. Step 4 asks a
+separate question one level up: "does what happened actually establish this
+as a rule, or does it just make the rule plausible?" A claim can be quoted
+word-for-word accurately from this session and still only be suggestive —
+one failed attempt is evidence something *might* be a pattern, not proof
+that it is.
+
+**Proved** means the same failure recurred, the root cause was checked
+against real evidence rather than inferred, or a fix was watched to
+actually work. **Suggested** means it happened once, it's a reasonable
+read, but nothing confirmed it's more than a one-off. Proved lessons get
+written as firm rules. Suggested ones either get held out of memory
+entirely and named as a watch-item in the final report, or get persisted
+with the uncertainty stated in plain language right in the entry — never
+silently upgraded to sounding as settled as a proved one. If it's a
+genuine toss-up and a person is available to ask, that call goes to them
+rather than getting decided alone.
+
+### 5. Persist, don't just narrate
 
 This is the step that actually writes something down — see "Where lessons
 get saved" below for the mechanics. Before creating anything new, it checks
@@ -76,7 +98,7 @@ whether an existing memory already covers the same topic; if so, that entry
 gets extended in place instead of a near-duplicate getting created next to
 it.
 
-### 5. Keep the scope honest
+### 6. Keep the scope honest
 
 A few well-reasoned, specific lessons beat a long list of shallow ones. A
 session that genuinely went fine gets told exactly that — "nothing worth
@@ -86,11 +108,12 @@ that turned out more restrictive than expected, a connector that failed)
 get recorded as factual findings, kept distinct from process lessons about
 how the *work* was approached.
 
-### 6. Report back concisely
+### 7. Report back concisely
 
 The final message to the user is a few short sections — the lessons that
 got kept, and their practical effect going forward. Not a restatement of
-the whole session.
+the whole session. Any watch-items held back at Step 4 get named explicitly
+here rather than just quietly dropped.
 
 ---
 
@@ -117,6 +140,8 @@ wherever they keep notes.
 
 - Every lesson kept traces back to a specific, real event from the
   session — not a generic best practice restated because it sounded right.
+- Every lesson was explicitly sorted into proved or merely-suggested —
+  nothing that happened once gets written down reading as settled fact.
 - Nothing written duplicates a topic an existing memory already covers.
 - The memory index (or equivalent) reflects every new or changed file.
 - The report to the user is short: lessons and their practical effect, not

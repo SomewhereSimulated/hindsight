@@ -55,7 +55,26 @@ the following:
    identically on a second attempt is a stronger signal than something that
    failed once).
 
-4. **Persist the lessons, don't just narrate them.** If a persistent memory
+4. **Before saving any lesson, ask explicitly: did this session prove it,
+   or only suggest it?** "Proved" means the same failure happened more than
+   once, the root cause was actually confirmed against real evidence (a
+   tool's output, a file's contents, a technical constraint you checked),
+   or a fix was verified to work. "Suggested" means it happened once, reads
+   as plausible, but wasn't independently confirmed — a reasonable guess,
+   not a demonstrated fact. This is a distinct check from Step 3's
+   fact-verification — a claim can be accurately quoted from this session
+   and still only be suggestive of a broader rule, not proof of one.
+   - A proved lesson gets persisted as a firm rule.
+   - A merely-suggested lesson does not get persisted as settled fact.
+     Either hold it out of memory and name it in the final report as a
+     watch-item pending a second occurrence, or persist it with the
+     uncertainty stated plainly in the entry itself (e.g. "seen once, not
+     yet confirmed as a pattern") — never write a single-occurrence guess
+     as an unqualified rule.
+   - If it's genuinely unclear which bucket a lesson falls into and the
+     user is available, ask them rather than deciding unilaterally.
+
+5. **Persist the lessons, don't just narrate them.** If a persistent memory
    or notes system is available, write each surviving lesson into it as a
    discrete, well-labeled entry — check first whether an existing note
    already covers the same topic and update it in place rather than
@@ -64,7 +83,7 @@ the following:
    the user can save themselves, written so it remains useful without the
    original conversation as context.
 
-5. **Keep the scope honest.** A handful of well-reasoned, specific lessons
+6. **Keep the scope honest.** A handful of well-reasoned, specific lessons
    is more useful than a long list of shallow ones. If a session genuinely
    went well with nothing worth changing, say so plainly rather than
    manufacturing findings to fill space. If real infrastructure or
@@ -73,15 +92,16 @@ the following:
    connector that failed to connect), record those as factual findings
    distinct from process lessons about how the work itself was approached.
 
-6. **Report back concisely.** After persisting or writing up the hindsight
+7. **Report back concisely.** After persisting or writing up the hindsight
    report, summarize for the user in a few short sections what was learned
    and what will change — not a restatement of the whole session, just the
-   lessons and their practical effect on future work.
+   lessons and their practical effect on future work. Flag any watch-items
+   held back per Step 4 explicitly, so they don't just silently disappear.
 
 ## In this environment
 
 Check whether a persistent memory system is actually available before
-assuming step 4's fallback — most agent harnesses that have one expose it
+assuming Step 5's fallback — most agent harnesses that have one expose it
 distinctly from ordinary project files:
 
 - **Claude Code** keeps per-project memory under
@@ -100,14 +120,18 @@ distinctly from ordinary project files:
 - Every new or newly-relevant file needs a matching entry added to whatever
   serves as the index — a memory nothing points to is easy to miss next
   session.
-- If no such system exists in the current environment, fall back to step
-  4's standalone-document path — write the hindsight report as one
+- If no such system exists in the current environment, fall back to Step
+  5's standalone-document path — write the hindsight report as one
   self-contained file the user can save wherever they keep notes.
 
 ## Definition of done
 
 - Every persisted lesson traces to a real, specific event from this
   session — not a generic best practice restated.
+- Every persisted lesson was explicitly checked against Step 4: proved
+  lessons are stated as firm rules; merely-suggested ones are either held
+  as a reported watch-item or persisted with the uncertainty stated
+  plainly — nothing single-occurrence is written as an unqualified rule.
 - Nothing written duplicates an existing memory's topic; existing entries
   were checked and updated in place where one already applied.
 - The memory index (or equivalent) reflects every new file.
