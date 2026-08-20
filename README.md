@@ -10,6 +10,8 @@ journal of what got done; a filter for what's worth remembering.
 **Read [GUIDE.md](GUIDE.md) for the full walkthrough of how it thinks
 through a session and what it will and won't write down.**
 
+![Hindsight overview: process (pull durable lessons, save as persistent memory), requirements, installation, and trigger phrases](docs/hindsight-infographic.jpg)
+
 ---
 
 ## What you get
