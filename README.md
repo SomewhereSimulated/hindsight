@@ -30,6 +30,12 @@ through a session and what it will and won't write down.**
   tasks. Its only writes are to memory (and whatever indexes that memory).
 - **Portable** — no project-specific content baked in. It works the same way
   regardless of what the session was actually about.
+- **Pays for itself in tokens, not just tidiness** — a lesson written down
+  once means a future session doesn't re-spend tokens rediscovering it
+  through the same trial and error, re-litigating a question that was
+  already settled, or repeating a correction you already made. The saving
+  compounds: the more sessions an assistant runs, the more that accumulated
+  memory shortens the average one.
 
 ## Requirements
 

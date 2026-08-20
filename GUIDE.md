@@ -26,6 +26,18 @@ re-verify a fix, re-run a test, or second-guess a decision that was already
 made — it only asks "what should be done differently next time," which is a
 different question than "was this session's work correct."
 
+## It's a token saver, not just a tidiness habit
+
+The obvious payoff of persistent memory is that an assistant stops making
+the same mistake twice. The less obvious one is cost: every lesson that
+would otherwise get rediscovered mid-session — through a failed attempt,
+a wrong assumption that has to be corrected, a question that's already been
+answered before — is tokens spent re-deriving something that was already
+known. Write it down once, and every future session skips straight past
+that dead end instead of walking into it again. Run this regularly and the
+saving compounds: the more history an assistant accumulates, the shorter
+its *average* session gets, not just its error count.
+
 ---
 
 ## The six-step pass
